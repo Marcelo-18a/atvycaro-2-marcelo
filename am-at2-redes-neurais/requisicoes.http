@@ -2,53 +2,38 @@
 GET http://127.0.0.1:8000/diagnostico/modelo
 User-Agent: Tester-Audit-Agent
 
-### Predicao valida - perfil de baixo risco
+### Predicao valida - episodio de alto desempenho
 POST http://127.0.0.1:8000/predict
 User-Agent: Tester-Audit-Agent
 Content-Type: application/json
 
 {
-  "idade": 42,
-  "renda_mensal": 8200.0,
-  "tempo_emprego_meses": 120,
-  "score_credito": 790,
-  "possui_imovel": "Sim",
-  "possui_veiculo": "Sim",
-  "estado_civil": "Casado",
-  "nivel_escolaridade": "Pos-graduacao",
-  "indice_divida": 18.5
+  "min_score": 1548.0,
+  "sum_score": 3107.6,
+  "size_bytes": 8243598,
+  "hora": 9
 }
 
-### Predicao valida - perfil de alto risco
+### Predicao valida - episodio de baixo desempenho
 POST http://127.0.0.1:8000/predict
 User-Agent: Tester-Audit-Agent
 Content-Type: application/json
 
 {
-  "idade": 23,
-  "renda_mensal": 1700.0,
-  "tempo_emprego_meses": 8,
-  "score_credito": 390,
-  "possui_imovel": "Nao",
-  "possui_veiculo": "Nao",
-  "estado_civil": "Solteiro",
-  "nivel_escolaridade": "Fundamental",
-  "indice_divida": 82.0
+  "min_score": 1213.0,
+  "sum_score": 2426.0,
+  "size_bytes": 7000000,
+  "hora": 3
 }
 
-### Predicao invalida - score_credito fora do limite
+### Predicao invalida - hora fora do limite
 POST http://127.0.0.1:8000/predict
 User-Agent: Tester-Audit-Agent
 Content-Type: application/json
 
 {
-  "idade": 35,
-  "renda_mensal": 4500.0,
-  "tempo_emprego_meses": 72,
-  "score_credito": 900,
-  "possui_imovel": "Sim",
-  "possui_veiculo": "Nao",
-  "estado_civil": "Casado",
-  "nivel_escolaridade": "Superior",
-  "indice_divida": 28.5
+  "min_score": 1450.0,
+  "sum_score": 2900.0,
+  "size_bytes": 10000000,
+  "hora": 24
 }

@@ -1,8 +1,8 @@
 # AM - AT2 - Redes Neurais
 
-Projeto avaliativo de classificacao de risco de credito com uma rede neural MLP, scikit-learn e FastAPI.
+Projeto avaliativo de classificacao do desempenho de episodios do desafio PTCG da Pokemon Company com uma rede neural MLP, scikit-learn e FastAPI.
 
-> O dataset fornecido nao existia no workspace inicial. Foi criado um CSV sintetico de exemplo em `data/dataset.csv`; substitua-o pelo dataset real do Kaggle mantendo os nomes das colunas ou ajuste o notebook e os schemas.
+O dataset real do Kaggle foi salvo em `data/dataset.csv`. A variavel alvo `categoria_desempenho` e criada a partir dos tercis do `avg_score`: Baixo, Medio ou Alto.
 
 ## Instalacao
 
@@ -51,19 +51,14 @@ User-Agent: Tester-Audit-Agent
 Content-Type: application/json
 
 {
-  "idade": 42,
-  "renda_mensal": 8200.0,
-  "tempo_emprego_meses": 120,
-  "score_credito": 790,
-  "possui_imovel": "Sim",
-  "possui_veiculo": "Sim",
-  "estado_civil": "Casado",
-  "nivel_escolaridade": "Pos-graduacao",
-  "indice_divida": 18.5
+  "min_score": 1548.0,
+  "sum_score": 3107.6,
+  "size_bytes": 8243598,
+  "hora": 9
 }
 ```
 
 ## Links da atividade
 
-- Link do dataset no Kaggle: **[inserir link aqui]**
+- Link do dataset no Kaggle: **https://www.kaggle.com/competitions/ptcg-ai-battle-challenge-2026**
 - Link do video demonstrativo: **[inserir link aqui]**

@@ -19,7 +19,7 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
 
 
 app = FastAPI(
-    title="API de Risco de Credito - AT2",
+    title="API de Desempenho PTCG - AT2",
     lifespan=lifespan,
 )
 
